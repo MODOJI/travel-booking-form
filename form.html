@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiptoe Travels & Tours - Booking Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #002B4F;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #CFA33E;
+      color: #002B4F;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: #003A65;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #CFA33E;
+      color: #002B4F;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    input[type="submit"]:hover {
+      background-color: #b68c2f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Tiptoe Travels & Tours - Booking Form
+  </header>
+
+  <form action="https://formsubmit.co/tiptoetravels247@gmail.com" method="POST">
+    <!-- Prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <!-- Redirect after submission -->
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="Full Name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="Email" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="Phone" required>
+
+    <label for="service">Service Needed</label>
+    <select id="service" name="Service" required>
+      <option value="">-- Select a Service --</option>
+      <option>Study Abroad</option>
+      <option>Health Tourism (Turkey Only)</option>
+      <option>Hajj & Umrah</option>
+      <option>Visa Assistance</option>
+      <option>Package Pickup (Turkey - Nigeria)</option>
+      <option>Cargo from Turkey</option>
+    </select>
+
+    <label for="country">Preferred Country</label>
+    <input type="text" id="country" name="Preferred Country" placeholder="e.g., Canada, UK">
+
+    <label for="date">Travel Date</label>
+    <input type="date" id="date" name="Travel Date">
+
+    <label for="notes">Additional Notes</label>
+    <textarea id="notes" name="Additional Notes" rows="4" placeholder="Any extra details..."></textarea>
+
+    <input type="submit" value="Submit Booking">
+  </form>
+
+</body>
+</html>
