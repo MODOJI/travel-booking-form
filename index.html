@@ -95,8 +95,10 @@
         <option>Cargo from Turkey</option>
       </select>
 
-      <label for="country">Preferred Country</label>
-      <input type="text" id="country" name="Preferred Country" placeholder="e.g., Canada, UK">
+      <div id="country-wrapper">
+        <label for="country">Preferred Country</label>
+        <input type="text" id="country" name="Preferred Country" placeholder="e.g., Canada, UK">
+      </div>
 
       <label for="date">Travel Date</label>
       <input type="date" id="date" name="Travel Date">
@@ -108,7 +110,24 @@
     </form>
   </div>
 
+  <script>
+    const serviceSelect = document.getElementById("service");
+    const countryInput = document.getElementById("country");
+
+    serviceSelect.addEventListener("change", function() {
+      if (this.value === "Health Tourism (Turkey Only)") {
+        countryInput.value = "Turkey";      // auto-fill Turkey
+        countryInput.readOnly = true;       // lock field so user can't change
+      } else {
+        countryInput.value = "";            // clear value
+        countryInput.placeholder = "e.g., Canada, UK";
+        countryInput.readOnly = false;      // make editable again
+      }
+    });
+  </script>
+
 </body>
 </html>
 
 <input type="hidden" name="_next" value="https://modoji.github.io/travel-booking-form/thank-you.html">
+
